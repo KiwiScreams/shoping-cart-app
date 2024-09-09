@@ -11,30 +11,41 @@ const Cart = () => {
     removeItem,
     emptyCart,
   } = useCart();
-  if (isEmpty) return <h1>your cart is empty</h1>;
+
   return (
     <>
-      <div>
-        <h1>CaRT</h1>
+      <div className="cart-section">
+        <h1>Your Cart</h1>
         <h5>
           {totalUniqueItems} total items {totalItems}
-          {items.map((item, index) => {
-            return (
-              <div key={item.id}>
-                <img src={item.image} alt="" />
-                <h1>{item.title}</h1>
-                <h1>{item.price}</h1>
-                <h1>{item.quantity}</h1>
-                <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>-</button>
-                <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
-                <button onClick={() => removeItem(item.id)}>remove</button>
-              </div>
-            );
-          })}
         </h5>
+        {items.map((item, index) => {
+          return (
+            <div key={item.id} className="cart">
+              <div className="image-container">
+                <img src={item.image} alt="" />
+              </div>
+              <h4>{item.name}</h4>
+              <h4>{item.price}</h4>
+
+              <div className="buttons">
+                <button
+                  onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
+                >
+                  -
+                </button>
+                <h4>{item.quantity}</h4>
+                <button
+                  onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          );
+        })}
         <h2>total: {cartTotal}</h2>
         <button onClick={() => emptyCart()}>Clear</button>
-        <h1>CART</h1>
       </div>
     </>
   );
