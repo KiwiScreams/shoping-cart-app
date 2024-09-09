@@ -5,8 +5,8 @@ function App() {
   return (
     <>
       <CartProvider>
-        <Home />
-        <Cart />
+          <Home />
+          <Cart />
       </CartProvider>
     </>
   );
