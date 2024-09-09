@@ -53,3 +53,17 @@
     background-color: transparent;
     font-size: 18px;
 }
+.cart-section .total-div
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-section .total-div button
+{
+    width: fit-content;
+    background-color: var(--green-clr);
+    border-radius: 10px;
+    color: var(--white-clr);
+    padding: 10px;
+}

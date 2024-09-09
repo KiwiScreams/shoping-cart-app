@@ -44,8 +44,10 @@ const Cart = () => {
             </div>
           );
         })}
-        <h2>total: {cartTotal}</h2>
-        <button onClick={() => emptyCart()}>Clear</button>
+        <div className="total-div">
+          <h2 className="total">Total Price: {cartTotal}</h2>
+          <button onClick={() => emptyCart()}>Clear</button>
+        </div>
       </div>
     </>
   );

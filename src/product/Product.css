@@ -47,9 +47,10 @@
     width: 100%;
     color: var(--white-clr);
     border-radius: 10px;
+    height: 30px;
     background-color: var(--green-clr);
 }
-.products-section button:hover
+button:hover
 {
     opacity: 0.8;
 }
