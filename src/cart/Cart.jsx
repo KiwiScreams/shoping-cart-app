@@ -15,17 +15,24 @@ const Cart = () => {
   return (
     <>
       <div>
+        <h1>CaRT</h1>
         <h5>
           {totalUniqueItems} total items {totalItems}
-          {items.map((item, index) => 
-        {
-            <div key={index}>
+          {items.map((item, index) => {
+            return (
+              <div key={item.id}>
                 <img src={item.image} alt="" />
                 <h1>{item.title}</h1>
                 <h1>{item.price}</h1>
-            </div>
-        })}
+                <h1>{item.quantity}</h1>
+                <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>-</button>
+                <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
+                <button>remove</button>
+              </div>
+            );
+          })}
         </h5>
+        <h1>CART</h1>
       </div>
     </>
   );
