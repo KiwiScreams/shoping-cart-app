@@ -12,7 +12,7 @@ const Home = () => {
             image={prod.image}
             name={prod.name}
             desc={prod.desc}
-            item={item}
+            item={prod}
             price={prod.price}
           />
         );

@@ -1,7 +1,7 @@
 import "./Cart.css";
 import { useCart } from "react-use-cart";
 const Cart = () => {
-  const { 
+  const {
     isEmpty,
     totalUniqueItems,
     items,
@@ -9,13 +9,25 @@ const Cart = () => {
     cartTotal,
     updateItemQuantity,
     removeItem,
-    emptyCart
-   } = useCart();
-   if(isEmpty) return <h1>your cart is empty</h1>
+    emptyCart,
+  } = useCart();
+  if (isEmpty) return <h1>your cart is empty</h1>;
   return (
-  <>
-
-  </>
+    <>
+      <div>
+        <h5>
+          {totalUniqueItems} total items {totalItems}
+          {items.map((item, index) => 
+        {
+            <div key={index}>
+                <img src={item.image} alt="" />
+                <h1>{item.title}</h1>
+                <h1>{item.price}</h1>
+            </div>
+        })}
+        </h5>
+      </div>
+    </>
   );
 };
 
