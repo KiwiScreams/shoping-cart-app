@@ -1,4 +1,3 @@
-import { useCart } from "react-use-cart";
 import Home from "./home/Home";
 import Cart from "./cart/Cart";
 import { CartProvider } from "react-use-cart";
@@ -6,8 +5,8 @@ function App() {
   return (
     <>
       <CartProvider>
-        <Home />
-        <Cart />
+          <Home />
+          <Cart />
       </CartProvider>
     </>
   );

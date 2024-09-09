@@ -1,18 +1,16 @@
 import "./Product.css";
 import { useCart } from "react-use-cart";
 const Product = (props) => {
-    const {addItem} = useCart();
+  const { addItem } = useCart();
   return (
     <>
-      <section>
-        <h1>product</h1>
-        <div>
-          <h2>{props.name}</h2>
-          <h3>{props.price}</h3>
+      <section className="products-section">
+        <div className="image-container">
           <img src={props.image} alt="" />
-          <p>{props.desc}</p>
-          <button onClick={() => addItem(props.item)}>add</button>
         </div>
+        <h2>{props.name}</h2>
+        <h3>${props.price.toFixed(2)}</h3>
+        <button onClick={() => addItem(props.item)}>Add to cart</button>
       </section>
     </>
   );
