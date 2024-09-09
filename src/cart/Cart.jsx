@@ -32,6 +32,8 @@ const Cart = () => {
             );
           })}
         </h5>
+        <h2>total: {cartTotal}</h2>
+        <button onClick={() => emptyCart()}>Clear</button>
         <h1>CART</h1>
       </div>
     </>
