@@ -15,3 +15,7 @@
   --black-clr: #000;
   --green-clr: #69ff69;
 }
+button, a
+{
+  cursor: pointer;
+}

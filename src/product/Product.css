@@ -3,8 +3,12 @@
     width: fit-content;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px #7171714e;
     border-bottom: 1px solid var(--green-clr);
+}
+.products-section:hover
+{
+    box-shadow: 0 0 10px transparent;
 }
 .products-section h2
 {
@@ -27,6 +31,8 @@
     width: 150px;
     height: 100px;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7171714e;
 }
 .products-section .image-container img
 {
@@ -40,4 +46,8 @@
     color: var(--white-clr);
     border-radius: 10px;
     background-color: var(--green-clr);
+}
+.products-section button:hover
+{
+    opacity: 0.8;
 }

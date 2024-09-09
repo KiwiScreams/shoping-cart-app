@@ -9,7 +9,7 @@ const Product = (props) => {
           <img src={props.image} alt="" />
         </div>
         <h2>{props.name}</h2>
-        <h3>${props.price}</h3>
+        <h3>${props.price.toFixed(2)}</h3>
         <button onClick={() => addItem(props.item)}>Add to cart</button>
       </section>
     </>
