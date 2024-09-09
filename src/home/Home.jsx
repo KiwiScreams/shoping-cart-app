@@ -1,6 +1,7 @@
 import Product from "../product/Product";
 import "./Home.css";
 import data from "../data";
+import Cart from "../cart/Cart";
 const Home = () => {
   return (
     <>
